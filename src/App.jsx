@@ -1,28 +1,23 @@
-import { useState } from 'react'
+import React from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Sections from './components/Sections';
+import Footer from './components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
+    <div className="min-h-screen w-full bg-[#0a0a0a] text-white">
+      {/* Liquid gold background accents */}
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(1000px_600px_at_-10%_-10%,rgba(212,175,55,0.06),transparent_60%),radial-gradient(900px_700px_at_110%_-20%,rgba(255,215,128,0.05),transparent_60%),radial-gradient(800px_500px_at_50%_120%,rgba(212,175,55,0.05),transparent_60%)]" />
+
+      <div className="relative z-10 space-y-10">
+        <Header />
+        <Hero />
+        <Sections />
+        <Footer />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
